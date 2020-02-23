@@ -1,0 +1,43 @@
+<mat-card>
+  <form #updateDreamForm="ngForm" (ngSubmit)="onUpdate(updateDreamForm)">
+    <!-- Header -->
+    <mat-card-header>
+      <mat-card-title>
+        <h2>Update Dream</h2>
+      </mat-card-title>
+    </mat-card-header>
+
+    <!-- Content -->
+    <mat-card-content>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Dream"
+          required
+          name="name"
+          #name
+          ngModel
+          minlength="5"
+          [(ngModel)]="dream.name"
+        />
+      </mat-form-field>
+    </mat-card-content>
+
+    <!-- Action -->
+    <button 
+      mat-raised-button 
+      color="primary" 
+      type="submit" 
+      [disabled]="!updateDreamForm.valid"
+      >Update
+    </button>
+
+    <button 
+      mat-raised-button 
+      color="accent" 
+      type="button" 
+      (click)="onDelete()"
+      >Delete
+    </button>
+  </form>
+</mat-card>

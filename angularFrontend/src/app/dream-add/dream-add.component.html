@@ -1,0 +1,20 @@
+<mat-card>
+  <form #addDreamForm="ngForm" (ngSubmit)="onSubmit(addDreamForm)">
+    <!-- Header -->
+    <mat-card-header>
+      <mat-card-title>
+        <h2>Add Dream</h2>
+      </mat-card-title>
+    </mat-card-header>
+
+    <!-- Content -->
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput placeholder="Dream" required name="name" #name [(ngModel)]="dream.name" minlength="5"/>
+      </mat-form-field>
+    </mat-card-content>
+
+    <!-- Action -->
+    <button mat-raised-button color="primary" type="submit" [disabled]="!addDreamForm.valid">Add</button>
+  </form>
+</mat-card>
