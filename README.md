@@ -25,7 +25,6 @@ Run class JavaSpringBackendApplication.java <br />
 Open the browser on URL = http://localhost:8080/dreams <br />
 ## Frontend
 Open the Angular frontend folder (angularFrontend) on Git Bash <br />
-Type ng add @angular/material (install Angular material) <br />
 Type npm install <br />
 Lunch the Angular app with ng serve --open <br />
 
